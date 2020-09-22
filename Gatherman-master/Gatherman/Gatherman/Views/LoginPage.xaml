@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Gatherman.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Source="logoGath.png" Margin="0,60,0,0"/>
+                <Image x:Name="LoginIcon2" Source="iconApp.png" Margin="0,15,0,0"/>
+            </StackLayout>
+
+            <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand" Padding="30, 30,30,30">
+                <StackLayout Margin="10">
+                    <Label Style="{StaticResource ProfileNameLabel}" Text="Se connecter" TextColor="DodgerBlue" />
+                </StackLayout>
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="true" />
+
+                <StackLayout BackgroundColor="White" Padding="6" Margin="7" >
+                    <Entry x:Name="Entry_Utilisateur" Placeholder=" Utilisateur" TextColor="black" PlaceholderColor="#E8E8E8" />
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Padding="6" Margin="7">
+                    <Entry x:Name="Entry_MotDePasse" Placeholder=" Mot de passe" IsPassword="true" TextColor="black" PlaceholderColor="#E8E8E8"/>
+                </StackLayout>
+<!--
+                <Frame BackgroundColor="White" Padding="6" Margin="7" CornerRadius="20" BorderColor="#E8E8E8">
+                    <Entry x:Name="Entry_Utilisateur" Placeholder="Utilisateur" TextColor="black" PlaceholderColor="#E8E8E8" />
+                </Frame>
+
+                <Frame BackgroundColor="White" Padding="6" Margin="7" CornerRadius="20" BorderColor="#E8E8E8">
+                    <Entry x:Name="Entry_MotDePasse" Placeholder="Mot de passe" IsPassword="true" TextColor="black" PlaceholderColor="#E8E8E8"/>
+                </Frame>
+-->
+                <Button x:Name="Btn_SeConnecter" ImageSource="login.png" Margin="20" Style="{StaticResource FollowButton}" Clicked="FunctionSeConnecter"/>
+      
+            </StackLayout>
+            <Image  HeightRequest="100" Source="nuage.png" WidthRequest="100" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
